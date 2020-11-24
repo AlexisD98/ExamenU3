@@ -1,0 +1,61 @@
+package bancoazteca;
+
+import java.util.Random;
+
+public class metodoazteca {
+    int conta = 0;
+    private nodoazteca raiz,segunda,VIP,fina;
+    nodoazteca cima;
+
+    public void insertar(int clientes) {
+        VIP= new nodoazteca();
+        raiz.dato=clientes;
+        VIP.siguiente=null;
+        if (Tventanilla()) {
+            raiz = VIP;
+            fina = VIP;
+        } else {
+            fina.sig = VIP;
+            fina = VIP;
+        }
+    }
+    
+    public void mostar() {
+        nodoazteca recorrer=raiz;
+        if (raiz == null) {
+            System.out.println("No hay Clientes VIP en Cola");
+        }else {
+            while (recorrer != null) {
+            System.out.println("Tu cola VIP es: "+recorrer);
+            recorrer=recorrer.siguiente;
+            }
+            System.out.println("");
+        }
+        
+        if(segunda==null){
+            System.out.println("******************************");
+            System.out.println("No hay Clientes Normales en Cola");
+        }else{
+            nodoazteca reco=segunda;
+            System.out.println("Tu cola Normal es: ");
+            while (reco!= null) {
+                System.out.println(reco.dato+"Normal: ");
+                reco=reco.sig;
+            }
+        }
+    }
+
+    public void ventanilla(){
+        if (conta == 0) {
+            System.out.println("Ventanillas Vacias");
+        } else {
+            
+        }
+    }
+    public boolean Tventanilla() {
+        if (conta == 0) {
+            System.out.println("No hay Clientes en Ventanillas");
+        }
+        return false;
+    }
+}
