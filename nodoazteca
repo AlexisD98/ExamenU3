@@ -1,0 +1,18 @@
+package bancoazteca;
+
+public class nodoazteca {
+    nodoazteca siguiente;
+    nodoazteca raiz;
+    nodoazteca sig;
+    nodoazteca nodoVIP;
+    int dato;
+    /*
+    public nodoazteca (int dato){
+        this.dato=dato;
+        this.siguiente=null;
+    }
+    public nodoazteca(){
+        
+    }
+*/
+}
