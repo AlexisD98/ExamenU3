@@ -1,0 +1,61 @@
+package bancoazteca;
+
+import java.util.*;
+
+public class Bancoazteca {
+
+    public static void main(String[] args) {
+        //Creacion de Cola y Scanner
+        String[] clientes = {"VIP", "Normal"};
+        Scanner entrada = new Scanner(System.in);
+        metodoazteca objmetodoazteca=new metodoazteca();
+        //Variables
+        int opc, c = 0;
+        int turno=0,turno2=0;
+        
+        do {
+            System.out.println(" *Banco AztecaGamerPink* ");
+            System.out.println("-----------------------------");
+            System.out.println("Selecciones su Opcion: ");
+            System.out.println("1 Nuevo Cliente");
+            System.out.println("2 Mostrar Colas");
+            System.out.println("3 Pasar a Ventanilla");
+            System.out.println("4 Terminar Ventanilla");
+            System.out.println("5 Salir");
+            System.out.println("-----------------------------");
+            opc = entrada.nextInt();
+            System.out.println("-----------------------------");
+            switch (opc) {
+                case 1:
+                    if (turno==0){
+                        turno = (int)(Math.random()*10+1);
+                    }else{
+                        turno++;
+                    turno2=(int) (Math.random()*2+0);
+                    }
+                    if(turno2==0){
+                        System.out.println("Cola es: "+clientes[0]);
+                    }else{
+                        System.out.println("Cola es: "+clientes[1]);
+                    }
+                    System.out.println("******************************");
+                    break;
+                case 2:
+                    objmetodoazteca.mostar();
+                    System.out.println("******************************");
+                    break;
+                case 3:
+                    objmetodoazteca.ventanilla();
+                    System.out.println("******************************");
+                    break;
+                case 4:
+                    objmetodoazteca.Tventanilla();
+                    System.out.println("******************************");
+                    break;
+                case 5:
+                    System.exit(0);
+                    break;
+            }//switch
+        } while (c == 0);
+    }
+}
